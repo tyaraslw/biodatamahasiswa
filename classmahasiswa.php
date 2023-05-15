@@ -1,13 +1,22 @@
 <?php
-
 class mahasiswa{
-    public $nim = "25";
-    public $nama = "tyarasalwa";
-    public $jurusan = "DKV";
+    public $nim;
+    public $nama;
+    public $jurusan;
+
+    function __construct($nim,$nama,$jurusan){
+        $this->nim = $nim;
+        $this->nama = $nama;
+        $this->jurusan = $jurusan;
+    }
+
     function tampil_biodata(){
-        echo $this-> nim;
-        echo $this-> nama;
+        echo $this->nim, "<br>";
+        echo $this->nama, "<br>";
+        echo $this->jurusan;
     }
 }
-$tampil = new mahasiswa();
-$tampil->tampil_biodata();
+
+$tampil = new mahasiswa("25","tyara","rpl");
+$tampil->tampil_biodata()
+?>
